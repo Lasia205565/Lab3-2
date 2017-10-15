@@ -10,7 +10,7 @@
 <body>
 	<h3>欢迎给Lasia的书单添加新的书籍哦 ≖‿≖✧</h3>
 	<h4>请按照提示信息，输入图书的详细信息:</h4>
-	<s:form action="ADD" method="addbook">
+	<s:form action="ADDBOOK" method="addbook">
 		<s:textfield name="isbn4" label="请输入图书编号" />
 		<s:textfield name="title4" label="请输入题目标题" />
 		<s:textfield name="publisher4" label="请输入出版社名称" />
