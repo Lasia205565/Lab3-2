@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+
+		<action name="Home" class="lab2.TestAction" method="home">
+			<result name="success">/index.jsp</result>
+			<result name="FAILED">/failed.jsp</result>
+		</action>
+		<action name="ShowAllAuthor" class="lab2.TestAction" method="showallauthor">
+			<result name="success">/showallauthor.jsp</result>
+		</action>
+		<action name="Searchbyisbn" class="lab2.TestAction" method="searchbyisbn">
+			<result name="success">/result.jsp</result>
+			<result name="SEARCHFAILED">/searchfailed.jsp</result>
+		</action>
+		<action name="Search" class="lab2.TestAction" method="search">
+			<result name="success">/result.jsp</result>
+			<result name="SEARCHFAILED">/searchfailed.jsp</result>
+		</action>
+		<action name="ToAdd" class="lab2.TestAction" method="toadd">
+			<result name="JUDGE">/judge.jsp</result>
+			<result name="FAILED">/failed.jsp</result>
+		</action>
+		<action name="Judge" class="lab2.TestAction" method="judge">
+			<result name="TOADDBOOK">/addbook.jsp</result>
+			<result name="TOADDAUTHOR">/addauthor.jsp</result>
+		</action>
+		<action name="AddAuthor" class="lab2.TestAction" method="addauthor">
+			<result name="AUTHORIDWRONG">/authoridwrong.jsp</result>
+			<result name="TOADDBOOK">/addbook.jsp</result>
+			<result name="TOEDIT">/edit.jsp</result>
+			<result name="FAILED">/failed.jsp</result>
+		</action>
+		<action name="AddBook" class="lab2.TestAction" method="addbook">
+			<result name="ISBNWRONG">/isbnwrong.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+		<action name="Detail" class="lab2.TestAction" method="detail">
+			<result name="FAILED">/failed.jsp</result>
+			<result name="success">/detail.jsp</result>
+		</action>
+		<action name="Delete" class="lab2.TestAction" method="delete">
+			<result name="success">/success.jsp</result>
+			<result name="FAILED">/failed.jsp</result>
+		</action>
+		<action name="ToEdit" class="lab2.TestAction" method="toedit">
+			<result name="TOEDIT">/edit.jsp</result>
+			<result name="failed">/failed.jsp</result>
+		</action>
+		<action name="Edit" class="lab2.TestAction" method="edit">
+			<result name="success">/success.jsp</result>
+			<result name="TOADDAUTHOR">/addauthor.jsp</result>
+			<result name="failed">/failed.jsp</result>
+			<result name="WRONGTITLE">/wrongtitle.jsp</result>
+		</action>
+	</package>
+
+
+</struts>
